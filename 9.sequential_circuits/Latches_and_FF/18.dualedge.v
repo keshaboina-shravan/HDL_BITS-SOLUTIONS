@@ -13,7 +13,7 @@ module top_module (
      // Why does this work? 
     // After posedge clk, q1 changes to d^q1. Thus q = (q1^q2) = (d^q2^q2) = d.
     // After negedge clk, q2 changes to d^q2. Thus q = (q1^q2) = (d^q1^q1) = d.
-    // At each (positive or negative) clock edge, p and n FFs alternately
+    // At each (positive or negative) clock edge, q1 and q2 FFs alternately
     // load a value that will cancel out the other and cause the new value of d to remain.
     assign q = q1^q2; 
 endmodule
