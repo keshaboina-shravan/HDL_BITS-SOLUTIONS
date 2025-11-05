@@ -5,7 +5,7 @@ module top_module(
     always@(in)begin
         count = 0;
         for(int i=0; i<255;i=i+1)begin
-            if(in[i]==1)
+            if(in[i]==1) // if(in[i]) as the same functionality as if (in[i]==1)
                 count=count+1'b1;
         else
             count=count;
